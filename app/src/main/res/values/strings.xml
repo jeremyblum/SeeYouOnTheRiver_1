@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">See You On The River</string>
+    <string name="title_activity_add">Add</string>
+    <string name="playspot">Playspot</string>
+    <string name="river">River</string>
+    <string name="location">Location</string>
+    <string name="lat_long_prefix">(</string>
+    <string name="lat_long_connector">&#176;, </string>
+    <string name="lat_long_suffix">&#176;)</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="levels">Levels</string>
+    <string name="lowlevel">Low level</string>
+    <string name="ideallevel">Ideal level</string>
+    <string name="highlevel">High level</string>
+    <string name="gaugesite">Gauge Site</string>
+    <string name="add">Add site</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete record</string>
+    <string name="settings">Settings</string>
+    <string name="save">Save changes</string>
+    <string name="liked">Liked?</string>
+
+</resources>

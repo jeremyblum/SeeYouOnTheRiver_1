@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.psu.jjb24.seeyouontheriver.AddActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TextView
+        android:id="@+id/lblPlayspot"
+        style="@style/list_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/playspot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <EditText
+        android:id="@+id/txtPlayspot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/lblGaugeSite"
+        android:hint="@string/playspot"
+        android:importantForAutofill="no"
+        android:inputType="textCapSentences"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPlayspot" />
+
+    <TextView
+        android:id="@+id/lblLocation"
+        style="@style/list_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPlayspot" />
+
+    <EditText
+        android:id="@+id/txtRiver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/river"
+        android:importantForAutofill="no"
+        android:inputType="textCapSentences"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblLocation" />
+
+    <TextView
+        android:id="@+id/lblLatLongPrefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/lat_long_prefix"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblLevel"
+        app:layout_constraintEnd_toStartOf="@+id/txtLatitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRiver" />
+
+    <EditText
+        android:id="@+id/txtLatitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/latitude"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/lblLevel"
+        app:layout_constraintEnd_toStartOf="@+id/lblLatLongConnector"
+        app:layout_constraintStart_toEndOf="@id/lblLatLongPrefix"
+        app:layout_constraintTop_toBottomOf="@id/txtRiver" />
+
+    <TextView
+        android:id="@+id/lblLatLongConnector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:importantForAutofill="no"
+        android:text="@string/lat_long_connector"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblLevel"
+        app:layout_constraintEnd_toStartOf="@+id/txtLongitude"
+        app:layout_constraintStart_toEndOf="@+id/txtLatitude"
+        app:layout_constraintTop_toBottomOf="@+id/txtRiver" />
+
+
+    <EditText
+        android:id="@+id/txtLongitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/longitude"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/lblLevel"
+        app:layout_constraintEnd_toStartOf="@+id/lblLatLongSuffix"
+        app:layout_constraintStart_toEndOf="@+id/lblLatLongConnector"
+        app:layout_constraintTop_toBottomOf="@+id/txtRiver" />
+
+    <TextView
+        android:id="@+id/lblLatLongSuffix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/lat_long_connector"
+        android:importantForAutofill="no"
+        android:text="@string/lat_long_suffix"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtLongitude"
+        app:layout_constraintTop_toBottomOf="@+id/txtRiver" />
+
+    <TextView
+        android:id="@+id/lblLevel"
+        style="@style/list_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/levels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblLatLongPrefix" />
+
+    <EditText
+        android:id="@+id/txtLowLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/lowlevel"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblLevel" />
+
+    <EditText
+        android:id="@+id/txtIdealLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/ideallevel"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/txtLowLevel"
+        app:layout_constraintTop_toBottomOf="@+id/lblLevel" />
+
+    <EditText
+        android:id="@+id/txtHighLevel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/highlevel"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/txtIdealLevel"
+        app:layout_constraintTop_toBottomOf="@+id/lblLevel" />
+
+    <TextView
+        android:id="@id/lblGaugeSite"
+        style="@style/list_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/gaugesite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHighLevel" />
+
+    <EditText
+        android:id="@+id/txtGaugeSite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/gaugesite"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblGaugeSite" />
+</androidx.constraintlayout.widget.ConstraintLayout>
